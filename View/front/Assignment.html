@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>EduWell - Assignments</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-eduwell-style.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+</head>
+
+<body>
+
+    <!-- *** Header Area Start *** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo.png" alt="EduWell Logo"  style="width: 70px; height: auto;">
+                        </a>
+                        <ul class="nav">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="courses.html">Courses</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="forum.html">Forum</a></li>
+                        </ul>
+                        <a class="menu-trigger">
+                            <span>Menu</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- *** Header Area End *** -->
+
+    <!-- Page Heading -->
+    <section class="page-heading" style="background: #f7f7f7; padding: 60px 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="header-text">
+                        <h1>Assignments & Evaluations</h1>
+                        <p>Test your knowledge and evaluate your progress through quizzes and self-assessments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="quiz-section">
+        <div class="container">
+            <div class="section-heading">
+                <h4>Quiz</h4>
+                <p>Attempt the questions below to test your understanding of the course material.</p>
+            </div>
+
+            <form id="quiz-form">
+                <!-- Question 1 -->
+                <div class="quiz-question">
+                    <h5>1. What is the primary purpose of HTML?</h5>
+                    <div class="form-check">
+                        <input type="radio" name="question1" id="q1a" class="form-check-input" value="style">
+                        <label for="q1a" class="form-check-label">To style web pages</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="question1" id="q1b" class="form-check-input" value="structure">
+                        <label for="q1b" class="form-check-label">To structure web content</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="question1" id="q1c" class="form-check-input" value="programming">
+                        <label for="q1c" class="form-check-label">To add functionality to web pages</label>
+                    </div>
+                </div>
+
+                <!-- Add more questions as needed -->
+
+                <button type="submit" class="btn btn-primary mt-3">Submit Quiz</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('quiz-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevents page refresh
+            alert('Thank you for submitting your answers!');
+        });
+    </script>
+</body>
+
+</html>

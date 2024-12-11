@@ -1,0 +1,384 @@
+:root {
+    --blue: #51ee46;
+    --white: #ffffff;
+    --gray: #ffffff;
+    --black1: #ff0000; /* Set the primary black color */
+    --text-color: #000000;
+    --hover-shadow: #ff0000;
+    --black2: #000000; /* Optional: lighter shade of black for secondary text */
+    --green: #4a47a3;
+    --light-blue: #5f5db6;
+    --dark-blue: #3b378c;
+    --white: #ffffff;
+    --gray: #f7f7f7;
+    --text-color: #333;
+  }
+
+  /* Navigation */
+.navigation {
+  position: fixed;
+  width: 280px;
+  height: 100%;
+  background: var(--blue);
+  border-left: 15px solid var(--blue);
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.navigation.active {
+  width: 80px;
+  background-color: #ffffff;
+}
+
+.navigation ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navigation ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.navigation ul li:hover,
+.navigation ul li.hovered {
+  background-color: var(--hover-shadow);
+}
+
+.navigation ul li:nth-child(1) {
+  margin-bottom: 40px;
+  pointer-events: none;
+}
+
+.navigation ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.navigation ul li:hover a,
+.navigation ul li.hovered a{
+  color: var(--blue);
+}
+
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 75px;
+  text-align: center;
+}
+
+.navigation ul li a .icon i {
+  font-size: 1.35rem;
+}
+
+.navigation ul li a .title {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+  padding-top: 3px;
+}
+
+.navigation ul li a .brand {
+  font-weight: bold;
+  font-size: large;
+}
+
+/* --------- curve outside ---------- */
+.navigation ul li:hover a::before,
+.navigation ul li.hovered a::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px 35px 0 10px var(--white);
+  pointer-events: none;
+}
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px var(--white);
+  pointer-events: none;
+}
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--gray);
+  }
+  
+  .courseenroll {
+    background: var(--white);
+    padding: 30px; /* Réduction du padding */
+    max-width: 500px; /* Réduction de la largeur maximale */
+    margin: 40px auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .courseenroll:hover {
+    transform: scale(1.02);
+  }
+  
+  .courseenroll .enrollHeader h2 {
+    font-weight: 700;
+    color: var(--green);
+    font-size: 1.5rem; /* Réduction de la taille de la police */
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .enroll .form {
+    margin-top: 15px;
+  }
+  
+  .enroll .input-box {
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  .enroll .input-box label {
+    color: var(--text-color);
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .enroll .input-box input,
+  .enroll .input-box textarea,
+  .enroll .input-box select {
+    width: 100%;
+    height: 45px; /* Réduction de la hauteur */
+    padding: 0 12px; /* Réduction du padding */
+    font-size: 0.95rem; /* Réduction de la taille de la police */
+    color: #666;
+    margin-top: 6px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+  }
+  
+  .enroll .input-box textarea {
+    height: 90px; /* Réduction de la hauteur */
+    padding: 10px;
+  }
+  
+  .enroll .file-upload input[type="file"] {
+    padding: 8px; /* Réduction du padding */
+    font-size: 0.9rem;
+    border: 1px dashed var(--light-blue);
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+  }
+  
+  .enroll .form button {
+    height: 50px; /* Réduction de la hauteur */
+    width: 100%;
+    color: var(--white);
+    font-size: 1rem; /* Réduction de la taille de la police */
+    font-weight: 600;
+    margin-top: 15px; /* Réduction de l'espacement */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .enroll .form .primary-button {
+    background: var(--green);
+  }
+  
+  .enroll .form .primary-button:hover {
+    background: var(--dark-blue);
+    transform: translateY(-2px);
+  }
+  
+  .enroll .form .secondary-button {
+    background: #ddd;
+    color: var(--text-color);
+    margin-top: 8px;
+  }
+  
+  .enroll .form .secondary-button:hover {
+    background: #ccc;
+  }
+
+  /* Centrer le bouton */
+  .button-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+ /* Style du bouton "Ajouter Cours" */
+.add-course-btn {
+  background-color: #ff5f5f; /* Rouge */
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #e60000;
+  border-radius: 5px;
+  margin-bottom: 20px; /* Ajout d'un espace entre le bouton et la table */
+  display: inline-flex;
+  align-items: center;
+}
+
+.add-course-btn i {
+  margin-right: 8px; /* Espace entre l'icône et le texte */
+}
+
+/* Contenu principal */
+/* Contenu principal */
+.content {
+  margin-left: 260px;
+  padding: 20px;
+  width: calc(100% - 260px); /* Ajuster la largeur */
+}
+
+/* Style de la table */
+table {
+  width: 80%; /* Largeur flexible */
+  max-width: 900px; /* Limite de la largeur */
+  margin: 50px auto; /* Centrer la table */
+  border-collapse: collapse; /* Suppression de l'espacement entre les cellules */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Ombre plus prononcée */
+  border-radius: 12px; /* Coins arrondis */
+  background-color: white; /* Fond blanc */
+  transition: transform 0.3s ease-in-out; /* Animation de transformation */
+}
+
+/* Effet d'animation sur la table */
+table:hover {
+  transform: scale(1.02); /* Légère agrandissement au survol */
+}
+
+/* Style des en-têtes de table */
+table th {
+  background-color: #6c757d; /* Gris foncé pour un look premium */
+  color: white;
+  padding: 18px 25px; /* Plus de padding pour les en-têtes */
+  text-align: left;
+  font-size: 18px; /* Taille de police un peu plus grande */
+  text-transform: uppercase; /* Majuscules pour les titres */
+  letter-spacing: 1px; /* Espacement entre les lettres */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère sur les en-têtes */
+}
+
+/* Style des cellules de la table */
+table td {
+  padding: 14px 20px; /* Padding plus généreux */
+  text-align: left;
+  border-bottom: 1px solid #ddd; /* Bordure légère */
+  font-size: 15px; /* Taille de police légèrement plus grande */
+  color: #333; /* Texte de couleur sombre pour une meilleure lisibilité */
+  transition: background-color 0.3s ease; /* Animation de fond au survol */
+}
+
+/* Effet sur la ligne lors du survol */
+table tr:hover {
+  background-color: #f8f9fa; /* Gris clair au survol */
+}
+
+/* Effet de survol sur les cellules */
+table td:hover {
+  background-color: #e9ecef; /* Effet doux sur fond clair */
+  cursor: pointer; /* Curseur pointeur sur survol */
+  transform: translateY(-2px); /* Effet d'élévation */
+}
+
+/* Ajouter des bordures fines et propres */
+table th, table td {
+  border: 1px solid #ddd;
+}
+
+/* Centrer les actions dans la dernière colonne */
+table td:last-child {
+  text-align: center; /* Centrer les actions (ex. boutons) */
+  padding: 12px;
+}
+
+/* Style du bouton d'ajout de cours */
+.add-course-btn {
+  background-color: #ff0000 !important; /* Rouge forcé */
+  color: white;
+  padding-left: 16px;
+  margin-left: 350px;
+  margin-right: 160px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+/* Effet de survol du bouton */
+.add-course-btn:hover {
+  background-color: #007bff; /* Couleur plus foncée au survol */
+  transform: translateY(-2px); /* Effet de flottement */
+}
+
+/* Style de l'icône du bouton */
+.add-course-btn img {
+  width: 24px; /* Taille de l'icône */
+  height: 24px;
+}
+/* Style for the "Retour à la liste du cours" button */
+.button {
+    background-color: #ff5f5f; /* Red background */
+    color: white; /* White text color */
+    padding: 12px 25px; /* Padding inside the button */
+    font-size: 16px; /* Font size */
+    font-weight: 600; /* Bold text */
+    border: none; /* Remove the border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: inline-flex; /* Align text and icon */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    margin-top: 20px; /* Margin from top (space above) */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition on hover */
+  }
+  
+  /* Button hover effect */
+  .button:hover {
+    background-color: #007bff; /* Blue color on hover */
+    transform: translateY(-2px); /* Slightly move up the button */
+  }
+  
+  /* Optional: Add icon next to button text */
+  .button i {
+    margin-right: 8px; /* Space between icon and text */
+  }
